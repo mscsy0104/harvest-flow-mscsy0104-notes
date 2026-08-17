@@ -9,7 +9,7 @@ description = "Private personal instance for HarvestFlow."
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
-  "harvest-flow[dashboard]>=0.1.0",
+  "harvest-flow[dashboard] @ git+https://github.com/mscsy0104/harvest-flow.git",
 ]
 
 [tool.uv]
