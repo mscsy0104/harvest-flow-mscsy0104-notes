@@ -35,3 +35,14 @@ In another terminal:
 bash scripts/run_dashboard.sh
 ```
 
+## Ollama Preflight
+
+When Docker and local Ollama are both running, `localhost:11434` can resolve to a different service.
+Use `127.0.0.1` in `.env` for stable local routing.
+
+```bash
+curl -s http://127.0.0.1:11434/api/tags
+ollama pull gemma2:2b
+ollama pull nomic-embed-text
+```
+
