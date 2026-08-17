@@ -2,13 +2,17 @@
 .venv/
 __pycache__/
 *.pyc
+.DS_Store
 logs/
 qdrant_local/
 pipeline_metadata.db
 quartz/public/
 node_modules/
+ollama/
+models/
 
 # local runtime caches/data
 data/qdrant_local/
 data/logs/
 data/pipeline_metadata.db
+data/ollama/

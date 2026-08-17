@@ -1,11 +1,11 @@
-# harvest-flow-my
+# harvest-flow-mscsy0104-notes
 
-Private personal instance of HarvestFlow.
+Personal runtime repository for blogging and dashboard operation.
 
 ## What this repo contains
 
 - Personal `.env` values and runtime config
-- Personal vault/content/theme/deploy assets
+- Personal note source and Quartz content/theme assets
 - Thin runner scripts for engine/dashboard
 
 ## Dependency strategy
@@ -14,6 +14,12 @@ This repository depends on:
 
 - `harvest-flow` (open-source app package), or
 - `harvest-flow-core` + your own app wiring
+
+## Git tracking policy
+
+- Commit: note source and Quartz source/theme files.
+- Do not commit: qdrant data, logs, sqlite DB files, model caches, and local secrets.
+- Cache/runtime data should stay under `data/` and remain git-ignored.
 
 ## Quick Start
 
