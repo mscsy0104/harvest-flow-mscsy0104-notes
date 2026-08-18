@@ -15,6 +15,26 @@ This repository depends on:
 - `harvest-flow` (open-source app package), or
 - `harvest-flow-core` + your own app wiring
 
+### Pin/Update Rule
+
+- Promote versions in fixed order: `harvest-flow-core` -> `harvest-flow` -> `harvest-flow-mscsy0104-notes`.
+- Pin to tested app/core versions in `pyproject.toml` before running production-like workflows.
+- Keep the previous known-good pin so rollback can be done quickly.
+
+### Personal Smoke Runbook (Gate 3)
+
+1. `uv sync --all-extras`
+2. `bash scripts/run_engine.sh` and verify startup logs are healthy.
+3. Move one sample note from review request to publish-ready stage.
+4. `bash scripts/run_dashboard.sh` and verify dashboard + RAG menu loads.
+5. Record pass/fail and version pins in personal release notes.
+
+### Release/Rollback Ownership
+
+- Core maintainer owns core tags and API notes.
+- App maintainer owns app compatibility range and CI.
+- Personal ops maintainer owns final pin update and smoke evidence in this repository.
+
 ## Git tracking policy
 
 - Commit: note source and Quartz source/theme files.
