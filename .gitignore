@@ -16,3 +16,4 @@ data/qdrant_local/
 data/logs/
 data/pipeline_metadata.db
 data/ollama/
+.quartz/
